@@ -65,9 +65,11 @@ function myLoop(linkAmount) {
       pr: ip,
     });
     console.log(`STARTING WITH  NETWORK -- [${i}] ::::`, ip);
-    i++;
     if (i < proxyList.length) {
+      i++;
       myLoop();
+    } else {
+      i = 0;
     }
   }, 20000);
 }
